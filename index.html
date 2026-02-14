@@ -39,23 +39,39 @@
 
   <!-- Hero -->
   <section id="home" class="hero min-vh-100 d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
+    <div class="hero-bg-accent"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-6">
-          <p class="hero-label text-uppercase tracking-wide mb-2">Premium Beauty</p>
-          <h1 class="hero-title mb-4">Where luxury meets your skin.</h1>
-          <p class="hero-lead mb-4">Discover Velvino Cosmetics — thoughtfully crafted formulas for a radiant, confident you.</p>
-          <a class="btn btn-hero btn-lg rounded-0 px-4 py-3" href="#products">Explore Products</a>
+          <div class="hero-content">
+            <p class="hero-label text-uppercase mb-3">
+              <span class="hero-label-line"></span>
+              Premium Beauty
+            </p>
+            <h1 class="hero-title mb-4">Where luxury meets your skin.</h1>
+            <p class="hero-lead mb-4">Discover Velvino Cosmetics — thoughtfully crafted formulas for a radiant, confident you.</p>
+            <a class="btn btn-hero btn-lg rounded-0 px-4 py-3" href="#products">
+              <span class="btn-text">Explore Products</span>
+              <i class="fa-solid fa-arrow-right ms-2 btn-icon"></i>
+            </a>
+          </div>
         </div>
         <div class="col-lg-6 text-center d-none d-lg-block">
-          <div class="hero-decoration">
-            <i class="fa-solid fa-spa fa-5x text-white opacity-25"></i>
+          <div class="hero-model-wrap">
+            <div class="hero-model-frame">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1f54db4e?w=600&q=80" alt="Velvino Cosmetics" class="hero-model-img">
+              <span class="hero-model-badge">New collection</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="hero-scroll">
-      <a href="#products" class="text-white"><i class="fa-solid fa-chevron-down"></i></a>
+      <a href="#products" class="hero-scroll-link">
+        <span class="hero-scroll-text">Scroll</span>
+        <span class="hero-scroll-line"></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
     </div>
   </section>
 
@@ -188,17 +204,22 @@
           <div class="card border-0 shadow-sm rounded-0">
             <div class="card-body p-4 p-md-5">
               <div class="row g-4">
-                <div class="col-md-4 text-center">
+                <div class="col-6 col-md-3 text-center">
                   <div class="contact-icon mx-auto mb-2"><i class="fa-solid fa-envelope"></i></div>
                   <h6 class="fw-semibold">Email</h6>
                   <a href="mailto:hello@velvinocosmetics.com" class="text-muted text-decoration-none">hello@velvinocosmetics.com</a>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-6 col-md-3 text-center">
+                  <div class="contact-icon mx-auto mb-2"><i class="fa-solid fa-phone"></i></div>
+                  <h6 class="fw-semibold">Mobile</h6>
+                  <a href="tel:+919876543210" class="text-muted text-decoration-none">+91 98765 43210</a>
+                </div>
+                <div class="col-6 col-md-3 text-center">
                   <div class="contact-icon mx-auto mb-2"><i class="fa-solid fa-globe"></i></div>
                   <h6 class="fw-semibold">Website</h6>
                   <a href="https://velvinocosmetics.com" class="text-muted text-decoration-none">velvinocosmetics.com</a>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-6 col-md-3 text-center">
                   <div class="contact-icon mx-auto mb-2"><i class="fa-brands fa-instagram"></i></div>
                   <h6 class="fw-semibold">Instagram</h6>
                   <a href="https://velvinocosmetics.com" class="text-muted text-decoration-none">@velvinocosmetics</a>
@@ -245,34 +266,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <!-- SmoothScroll plugin (free, vanilla JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js" crossorigin="anonymous"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      // SmoothScroll plugin: smooth animated scroll for menu/anchor links
-      if (typeof SmoothScroll === 'function') {
-        new SmoothScroll('a[href^="#"]', {
-          offset: 80,
-          speed: 800,
-          easing: 'easeInOutCubic',
-          updateURL: false
-        });
-      }
-
-      // Close mobile menu when a nav link is clicked
-      document.querySelectorAll('.navbar a[href^="#"]').forEach(function(link) {
-        link.addEventListener('click', function() {
-          var menu = document.querySelector('#navbarNav');
-          if (menu && menu.classList.contains('show') && typeof bootstrap !== 'undefined') {
-            var c = bootstrap.Collapse.getInstance(menu) || new bootstrap.Collapse(menu, { toggle: false });
-            c.hide();
-          }
-        });
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
