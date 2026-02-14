@@ -1,0 +1,241 @@
+/* Velvino Cosmetics - Custom styles */
+/* Native smooth scroll when clicking anchor links; leave space for fixed navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+:root {
+  --velvino-primary: #8b6914;
+  --velvino-primary-dark: #6b5010;
+  --velvino-gold: #c9a227;
+  --velvino-cream: #faf8f5;
+  --velvino-charcoal: #2c2c2c;
+  --velvino-muted: #6c757d;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--velvino-charcoal);
+  overflow-x: hidden;
+}
+
+/* Typography */
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-sub {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--velvino-muted);
+  letter-spacing: 0.15em;
+}
+
+.hero-title,
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--velvino-charcoal);
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--velvino-primary);
+  font-weight: 500;
+}
+
+.tracking-wide {
+  letter-spacing: 0.2em;
+}
+
+/* Navbar */
+.navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: var(--velvino-charcoal) !important;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--velvino-primary) !important;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--velvino-charcoal) 0%, #1a1a1a 50%, #2d2d2d 100%);
+  color: #fff;
+  padding-top: 80px;
+  position: relative;
+}
+
+.hero-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--velvino-gold);
+}
+
+.hero-lead {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 480px;
+}
+
+.btn-hero {
+  background: var(--velvino-gold);
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.btn-hero:hover {
+  background: var(--velvino-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-decoration {
+  opacity: 0.6;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.hero-scroll a {
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-8px); }
+  60% { transform: translateX(-50%) translateY(-4px); }
+}
+
+/* Product cards */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--velvino-cream);
+}
+
+.product-img-wrap .card-img-top {
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img-wrap .card-img-top {
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--velvino-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+.price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--velvino-primary);
+}
+
+/* About section */
+.about-img img {
+  transition: transform 0.4s ease;
+}
+
+.about-img:hover img {
+  transform: scale(1.03);
+}
+
+/* Contact icons */
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(139, 105, 20, 0.12);
+  color: var(--velvino-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.contact-icon:hover {
+  background: var(--velvino-primary);
+  color: #fff;
+}
+
+footer a:hover {
+  color: #fff !important;
+}
+
+/* Utilities */
+/* Smooth scroll: prevent content from hiding under fixed navbar */
+#home,
+#products,
+#about,
+#contact {
+  scroll-margin-top: 5.5rem;
+}
+
+.rounded-0 {
+  border-radius: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .hero-scroll {
+    bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product-img-wrap .card-img-top {
+    height: 220px;
+  }
+}
