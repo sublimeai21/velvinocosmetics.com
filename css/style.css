@@ -352,6 +352,116 @@ footer a:hover {
   border-radius: 0;
 }
 
+/* Premium Button and Interaction Styles */
+.btn-whatsapp {
+  background-color: #128C7E;
+  color: #ffffff !important;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #075E54;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0);
+}
+
+.btn-details {
+  border: 1px solid var(--velvino-charcoal) !important;
+  color: var(--velvino-charcoal);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+}
+
+.btn-details:hover {
+  background-color: var(--velvino-charcoal);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Premium Modal styling */
+.modal-content {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12) !important;
+}
+
+.modal-header {
+  background-color: var(--velvino-cream);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.text-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Premium Tabbed Navigation in Modals */
+.modal-body .nav-tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.modal-body .nav-tabs .nav-link {
+  border: none;
+  color: var(--velvino-muted) !important;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.modal-body .nav-tabs .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--velvino-primary);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.modal-body .nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  color: var(--velvino-primary) !important;
+  font-weight: 600 !important;
+}
+
+.modal-body .nav-tabs .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.modal-body .nav-tabs .nav-link:hover {
+  border: none;
+  color: var(--velvino-primary) !important;
+}
+
+.modal-body .tab-content {
+  padding-top: 1.25rem;
+}
+
+/* Premium Carousel Styling */
+.modal-body .carousel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-body .carousel-item img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-body .carousel:hover .carousel-item img {
+  transform: scale(1.03);
+}
+
 /* Responsive tweaks */
 @media (max-width: 991.98px) {
   .hero-scroll {
